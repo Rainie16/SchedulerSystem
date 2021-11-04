@@ -10,7 +10,8 @@ import java.util.Date;
 public class Interview {
 
     @Id
-    @GeneratedValue
+    @SequenceGenerator(name = "scheduler_interview_seq_gen", sequenceName = "SCHEDULER_INTERVIEW_SEQ", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "scheduler_interview_seq_gen")
     private int id;
 
     @Column

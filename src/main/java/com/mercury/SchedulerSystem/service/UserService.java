@@ -71,4 +71,8 @@ public class UserService {
         }
     }
 
+    public List<String> getAllName(){
+        return userDao.allUsername();
+    }
+
 }
