@@ -77,6 +77,7 @@ public class InterviewService {
 
     public Response save(Interview interview, Authentication authentication) {
         try {
+
             interview.setScheduler(authentication.getName());
             interview.setStatus("pending");
             interviewDao.save(interview);
